@@ -1,0 +1,36 @@
+TODO:
+
+GIT
+
+
+
+
+DONE:
+
+MySQL
+Eclipse with SpringTool, Maven and AngularJS plug-in
+Hibernate/JPA
+Spring-boot
+Spring-security (BCrypt)
+WS-Rest
+Maven
+npm/bower
+AngularJS (UI-GRID)
+Bootstrap
+HTML
+Javascript
+CSS
+
+
+
+
+
+
+functionality:
+
+Security : public, role, login/pswd
+table display data
+Form CRUD
+validation
+Popup when error from backend (index already exist)
+password encryption

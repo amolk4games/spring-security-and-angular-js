@@ -1,0 +1,114 @@
+.openGrid {
+	/*width: 60vw;
+	height: 40vh;*/
+}
+
+div.block {
+	overflow: hidden;
+}
+
+div.block label {
+	width: 160px;
+	display: block;
+	float: left;
+	text-align: left;
+}
+
+div.block .input {
+	margin-left: 4px;
+	float: left;
+}
+
+.dropdown-menu {
+	z-index: 1200 !important;
+}
+
+.center {
+	text-align: center;
+}
+
+.spaceLeft {
+	margin-left: 20px;
+}
+
+.padding {
+	padding-top: 25px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+
+label.col-lg-2 {
+	width: 25%;
+}
+
+div.col-lg-10 {
+	width: 75%;
+}
+
+label.col-lg-1 {
+	width: 10%;
+}
+
+div.col-lg-9 {
+	width: 90%;
+}
+
+div.col-lg-offset-2 {
+	text-align: right; 
+	float: right;
+}
+
+.spaceRight{
+	padding-right: 1cm;
+}
+
+.allignTopRight{
+	position: relative;
+	top: -28px;
+	text-align: right; 
+	float: right;
+}
+
+.noborderTable>thead>tr>th, .noborderTable>tbody>tr>th, .noborderTable>tfoot>tr>th, .noborderTable>thead>tr>td, .noborderTable>tbody>tr>td, .noborderTable>tfoot>tr>td {
+	border-top: 0px;
+}
+
+input[type=checkbox]
+{
+  /* incrase-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+}
+
+.tableI {
+    width: 60%;
+    max-width: 60%;
+    margin-bottom: 5px;
+    
+}
+.tdI {
+	padding: 5px;	
+}
+
+.margTop {
+	margin-top: 10px;
+}
+
+.center {
+	text-align: center;
+}
+
+.lower {
+	text-align: right;
+}
+
+input.ng-invalid {
+    background-color: pink;
+}
+input.ng-valid {
+    /*background-color: lightgreen;*/
+}

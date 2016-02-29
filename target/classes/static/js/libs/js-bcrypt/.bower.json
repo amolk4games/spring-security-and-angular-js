@@ -1,0 +1,17 @@
+{
+  "name": "julien-sarazin/js-bcrypt",
+  "version": "2.2.0",
+  "description": "Simpe bower integration of jsBCrypt which is an implementation of BCrypt written in JavaScript.",
+  "license": "New BSD License",
+  "homepage": "https://github.com/julien-sarazin/js-bcrypt",
+  "_release": "2.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.2.0",
+    "commit": "ddf68986d7668f09fc6a78573b4ac2eb839615d9"
+  },
+  "_source": "git://github.com/julien-sarazin/js-bcrypt.git",
+  "_target": "^2.2.0",
+  "_originalSource": "js-bcrypt",
+  "_direct": true
+}

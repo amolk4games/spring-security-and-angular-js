@@ -1,0 +1,54 @@
+<div>
+    <form name="countryForm" class="form-horizontal padding">
+        <fieldset>
+            <legend>Edit user</legend>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Id:</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" disabled value="{{vm.entity.userid}}" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Username:</label>
+                <div class="col-lg-10">
+                    <input class="form-control" name="username" ng-model="vm.entity.username" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Password:</label>
+                <div class="col-lg-10">
+                    <input type="password" class="form-control" name="password1" ng-model="vm.entity.password1" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Repeat password:</label>
+                <div class="col-lg-10">
+                    <input type="password" class="form-control" name="password2" ng-model="vm.entity.password2" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Enable:</label>
+                <div class="col-lg-10">
+                    <input type="checkbox" class="checkbox" name="enabled" ng-model="vm.entity.enabled" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Roles:</label>
+                <div class="col-lg-10">
+                    <label class="spaceRight">
+                        <input type="radio" ng-model="radioRole" value="ROLE_USER">User</label>
+                    <label class="spaceRight">
+                        <input type="radio" ng-model="radioRole" value="ROLE_ADMIN">Admin</label>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <input type="submit" class="btn btn-primary" ng-click="vm.save()" value="Save" ng-disabled="countryForm.$dirty && countryForm.$invalid">
+                    <button class="btn btn-primary" ng-click="vm.remove()">Delete</button>
+                    <button class="btn btn-default" ng-click="$close()">Cancel</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

@@ -1,0 +1,10 @@
+<h1>User</h1>
+
+<div ng-controller="UserCtrl as vm">
+    <div style="padding-left: 30px;">
+        <button type="button" id="addRow" class="btn btn-info" ng-click="addRow()">Add Row</button>
+        <button type="button" id="removeSelectedtRow" class="btn btn-info" ng-click="removeSelectedtRow()">Remove Select Row</button>
+    </div>
+    <br />
+    <div id="userGrid" ui-grid-move-columns ui-grid-selection ui-grid-resize-columns ui-grid-exporter ui-grid="vm.userGrid" class="openGrid"></div>
+</div>

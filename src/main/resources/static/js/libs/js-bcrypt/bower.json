@@ -1,0 +1,6 @@
+{
+  "name": "julien-sarazin/js-bcrypt",
+  "version": "2.2.0",
+  "description": "Simpe bower integration of jsBCrypt which is an implementation of BCrypt written in JavaScript.",
+  "license": "New BSD License"
+}
