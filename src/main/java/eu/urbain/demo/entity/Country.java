@@ -3,7 +3,12 @@ package eu.urbain.demo.entity;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.NamedQuery;
 
 
 /**
@@ -28,6 +33,9 @@ public class Country implements Serializable {
 	private String name;
 	
 	private Timestamp creation;
+	
+	@Lob
+	private byte[] flag;
 
 	public Country() {
 	}
@@ -78,6 +86,14 @@ public class Country implements Serializable {
 
 	public void setCreation(Timestamp creation) {
 		this.creation = creation;
+	}
+	
+	public byte[] getFlag() {
+		return this.flag;
+	}
+
+	public void setFlag(byte[] flag) {
+		this.flag = flag;
 	}
 
 }

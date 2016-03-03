@@ -19,5 +19,5 @@ public interface CountryRepository extends CrudRepository<Country, Long> {
 	
 	@Query(value = "select max(c.id) from Country c")
 	int getMaxId();
-
+	
 }

@@ -26,6 +26,6 @@
     "angular-bootstrap": "^1.1.2",
     "angular-ui-grid": "^3.1.1",
     "ui-select": "angular-ui-select#^0.14.9",
-    "julien-sarazin/js-bcrypt": "js-bcrypt#^2.2.0"
+    "js-bcrypt": "js-bcrypt#^2.2.0"
   }
 }

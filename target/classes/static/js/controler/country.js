@@ -50,13 +50,15 @@ function CountryCtrl($scope, $http, $uibModal, CountryEditor, uiGridConstants) {
 		$scope.gridApi = gridApi;
 	};
 
+	var d = new Date();
 	$scope.addRow = function() {
 		var newCountry= {
 			"id" : "0",
-			"name" : "-",
-			"code2" : "-",
-			"code3" : "-",
-			"coden" : 0
+			"name" : "",
+			"code2" : "",
+			"code3" : "",
+			"coden" : "",
+			"creation": d.getTime()
 		};
 		var rowTmp = {};
 		rowTmp.entity = newCountry;
@@ -116,16 +118,47 @@ function CountryEditor($rootScope, $uibModal) {
 function CountryEditCtrl($scope, $http, grid, row) {
 	var vm = this;
 	vm.entity = angular.copy(row.entity);
+	
+	$scope.listCountry = new Array();
+	
+	$http['get'](URL_COUNTRY_GETALL).success(function(response) {
+		$scope.listCountry = response;
+	});
+	
+	$scope.dateOptions = {
+			formatYear: 'yyyy',
+			maxDate: new Date(2020, 5, 22),
+			minDate: new Date(),
+			startingDay: 1
+	};
+	$scope.creationDatePopup = {
+		    opened: false
+		  };
+	$scope.openCreationDatePopup = function() {
+	    $scope.creationDatePopup.opened = true;
+	  };
 
 	vm.save = save;
 	function save() {
-		$http['post'](URL_COUNTRY_SAVE, vm.entity).success(function(response) {
-			row.entity = angular.extend(row.entity, response);
-			if (grid.data !== undefined) {
-				grid.data.push(row.entity);
-			}
-			$scope.modalInstance.close(row.entity);
-		});
+		var input = document.getElementById('flagFile');
+
+	    var fr = new FileReader();
+	    fr.onload = function () {
+	        var data = fr.result;
+	        //console.log(data);
+	        data = data.substring(data.indexOf(",")+1,data.length);
+	        //console.log(data);
+	        vm.entity.flag = data;
+	        //console.dir(vm.entity); 
+			  $http['post'](URL_COUNTRY_SAVE, vm.entity).success(function(response) {
+					row.entity = angular.extend(row.entity, response);
+					if (grid.data !== undefined) {
+						grid.data.push(row.entity);
+					}
+					$scope.modalInstance.close(row.entity);
+				});
+	    };
+	    fr.readAsDataURL(input.files[0]);
 	}
 
 	vm.remove = remove;

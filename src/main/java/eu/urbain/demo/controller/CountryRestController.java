@@ -20,11 +20,17 @@ public class CountryRestController {
 
 	@RequestMapping(value = "/getAll", method = RequestMethod.GET)
 	public Iterable<Country> getAllCountry() {
-		return countryRepository.findAll();
+		Iterable<Country> countryList = countryRepository.findAll(); 
+		for (Country c : countryList) {
+			c.setFlag(null);
+		}
+		return countryList;
 	}
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public @ResponseBody Country saveCountry(@RequestBody Country country) {
+		System.out.println(country.getName());
+		System.out.println(country.getFlag());
 		return countryRepository.save(country);
 	}
 

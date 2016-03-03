@@ -1,10 +1,3 @@
-TODO:
-
-GIT
-
-
-
-
 DONE:
 
 MySQL
@@ -15,12 +8,12 @@ Spring-security (BCrypt)
 WS-Rest
 Maven
 npm/bower
-AngularJS (UI-GRID)
+AngularJS (UI-GRID, UI-SELECTjs-bcrypt)
 Bootstrap
 HTML
 Javascript
 CSS
-
+git
 
 
 
@@ -34,3 +27,6 @@ Form CRUD
 validation
 Popup when error from backend (index already exist)
 password encryption
+select box with search
+calendar
+file upload

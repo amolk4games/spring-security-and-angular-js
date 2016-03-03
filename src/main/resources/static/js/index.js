@@ -12,7 +12,7 @@ var DATE_FORMAT = 'dd/MM/yyyy';
 
 var errorList = null;
 
-var app = angular.module('hello', ['ngRoute', 'ui.bootstrap', 'ui.grid', 'ui.grid.moveColumns', 'ui.grid.selection', 'ui.grid.resizeColumns', 'ui.grid.exporter', 'ngSanitize', 'ui.select']);
+var app = angular.module('openDemo', ['ngRoute', 'ngSanitize', 'ui.bootstrap', 'ui.select', 'ui.grid', 'ui.grid.moveColumns', 'ui.grid.selection', 'ui.grid.resizeColumns', 'ui.grid.exporter']);
 
 
 app.config(['$httpProvider', function($httpProvider) {
